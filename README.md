@@ -1,32 +1,49 @@
+
 # colorblocks.nvim
 
 > A minimal Neovim plugin to display color preview blocks next to hex codes like `#FF0000`.
+
+![Screenshot 1](https://raw.githubusercontent.com/Bishop-Fox/colorblocks.nvim/main/media/colorblocks-preview-1.png)
+![Screenshot 2](https://raw.githubusercontent.com/Bishop-Fox/colorblocks.nvim/main/media/colorblocks-preview-2.png)
 
 ## ✨ Features
 
 - 🎨 Highlights hex codes with colored virtual `■` blocks
 - 🔍 Matches `#RRGGBB` hex color patterns
-- 🛠 Togglable with commands
-- 🧠 Minimal and fast — no dependencies
+- 🧩 Custom layout (section = { "S", "  ", "H" } etc)
+- 🎛 Configurable foreground (`fg`) or background (`bg`) mode
+- 🛠 Commands to toggle, enable, disable
+- ⚡️ Minimal, fast, and dependency-free
 
 ## 📦 Installation (with lazy.nvim)
 
 ```lua
 {
-  dir = "~/Development/colorblocks.nvim",
-  name = "colorblocks",
+  "Bishop-Fox/colorblocks.nvim",
   config = function()
-    require("colorblocks").setup()
-  end
+    require("colorblocks").setup({
+      symbol = "󱡕",
+      virt_text_pos = "eol",
+      mode = "fg",
+      section = { "S", "  ", "The color is: ", "H" },
+      filetypes = { "lua", "css" },
+    })
+  end,
 }
 ```
 
-## ⚙️ Usage
-
-By default, it matches `#RRGGBB` format in any file and shows a colored block and comment after it:
+## 🧪 Usage
 
 ```lua
-local red = "#FF0000"  -- 🟥 #FF0000
+local red = "#FF0000"  -- ● The color is: #FF0000
+```
+
+```lua
+local mode_map = {
+  ["n"] = { "#569CD6", "NORMAL" },
+  ["i"] = { "#D16969", "INSERT" },
+  ["c"] = { "#608B4E", "COMMAND" },
+}
 ```
 
 ## 🔧 Commands
@@ -35,16 +52,12 @@ local red = "#FF0000"  -- 🟥 #FF0000
 - `:ColorBlocksEnable` — turn on highlights
 - `:ColorBlocksDisable` — clear extmarks
 
-## 🧪 Testing
+## 🔍 Screenshot Previews
 
-Try running from the `dev/` directory:
+![Preview 1](media/colorblocks-preview-1.png)
+![Preview 2](media/colorblocks-preview-2.png)
 
-```lua
-vim.opt.rtp:prepend(".")
-require("colorblocks").setup()
-```
-
-## 📁 Project Layout
+## 🧰 File Layout
 
 ```
 colorblocks.nvim/
