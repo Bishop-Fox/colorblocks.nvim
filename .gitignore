@@ -1,0 +1,6 @@
+*.swp
+*.luac
+stylua.toml
+/tests/
+/dev/
+/.vscode/
