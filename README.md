@@ -8,21 +8,21 @@
 
 ## ✨ Features
 
-- 🎨 Highlights hex codes with colored virtual `■` blocks
-- 🔍 Matches `#RRGGBB` hex color patterns
-- 🧩 Custom layout (section = { "S", "  ", "H" } etc)
-- 🎛 Configurable foreground (`fg`) or background (`bg`) mode
-- 🛠 Commands to toggle, enable, disable
-- ⚡️ Minimal, fast, and dependency-free
+-  Highlights hex codes with colored virtual `■` blocks
+-  Matches `#RRGGBB` hex color patterns
+-  Custom layout (section = { "S", "  ", "H" } etc)
+-  Configurable foreground (`fg`) or background (`bg`) mode
+-  Commands to toggle, enable, disable
+-  Minimal, fast, and dependency-free
 
-## 📦 Installation (with lazy.nvim)
+##  Installation (with lazy.nvim)
 
 ```lua
 {
   "Bishop-Fox/colorblocks.nvim",
   config = function()
     require("colorblocks").setup({
-      symbol = "󱡕",
+      symbol = "v󱡕",
       virt_text_pos = "eol",
       mode = "fg",
       section = { "S", "  ", "The color is: ", "H" },
@@ -74,4 +74,4 @@ colorblocks.nvim/
 
 ## 📄 License
 
-MIT © You
+MIT

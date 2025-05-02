@@ -79,7 +79,7 @@ local function colorize()
             virt_text_pos = opts.virt_text_pos,
           })
         end)
-        print("🔍 Creating hl_group:", hl_group, "→", "#" .. hex)
+        -- print("🔍 Creating hl_group:", hl_group, "→", "#" .. hex)
         -- Notify on error if extmark fails
         if not ok then
           vim.notify("ColorBlock extmark failed: " .. err, vim.log.levels.WARN)
