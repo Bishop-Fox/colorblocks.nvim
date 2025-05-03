@@ -3,8 +3,8 @@
 
 > A minimal Neovim plugin to display color preview blocks next to hex codes like `#FF0000`.
 
-![Screenshot 1](https://raw.githubusercontent.com/Bishop-Fox/colorblocks.nvim/main/media/colorblocks-preview-1.png)
-![Screenshot 2](https://raw.githubusercontent.com/Bishop-Fox/colorblocks.nvim/main/media/colorblocks-preview-2.png)
+![Screenshot 1](media/colorblocks-preview-1.png)
+![Screenshot 2](media/colorblocks-preview-2.png)
 
 ## ✨ Features
 
